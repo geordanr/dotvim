@@ -59,7 +59,7 @@ set statusline=%t%m%r%h%{SyntasticStatuslineFlag()}%=(%n:%c,%l/%L)%y%{fugitive#s
 set tabstop=8
 set tags=tags;/
 set tildeop
-set wildignore+=*/.git/*,*.pyc,*.o,*/build/*,*.deb,.*.swp,*.png,*.gif,*.so,*.pyd,*.dll,*.exe
+set wildignore+=*/.git/*,*.pyc,*.o,*/build/*,*.deb,.*.swp,*.png,*.gif,*.so,*.pyd,*.dll,*.exe,*/build/*
 set wildmode=list:longest,full
 set wrapscan
 set writebackup
@@ -104,6 +104,7 @@ nnoremap <silent> <Leader>gr :Gread<CR>
 nnoremap <silent> <Leader>gw :Gwrite<CR>
 nnoremap <silent> <Leader>gf :Git fetch --all --prune<CR>
 nnoremap <silent> <Leader>gp :Git push<CR>
+nnoremap <silent> <Leader>gP :Git pull<CR>
 
 "Function key mappings
 nnoremap <silent> <F5> :Gstatus<CR>
