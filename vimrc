@@ -59,7 +59,7 @@ set statusline=%t%m%r%h%{SyntasticStatuslineFlag()}%=(%n:%c,%l/%L)%y%{fugitive#s
 set tabstop=8
 set tags=tags;/
 set tildeop
-set wildignore+=*/.git/*,*.pyc,*.o,*/build/*,*.deb,.*.swp,*.png,*.gif,*.so,*.pyd,*.dll,*.exe,*/build/*
+set wildignore+=*/.git/*,*.pyc,*.pyo,*.o,*/build/*,*.deb,.*.swp,*.png,*.gif,*.so,*.pyd,*.dll,*.exe,*/test_paths/*,*/tmp/*,*/.sass-cache/*
 set wildmode=list:longest,full
 set wrapscan
 set writebackup
