@@ -110,3 +110,11 @@ nnoremap <silent> <Leader>gP :Git pull<CR>
 nnoremap <silent> <F5> :Gstatus<CR>
 nnoremap <silent> <F6> :TlistToggle<CR>
 map <silent> <F8> <Plug>TaskList
+
+"NERDTree
+"Activate NERDTree if no files specified
+autocmd vimenter * if !argc() | NERDTree | endif
+"Close vim if only window left is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"Ctrl-N toggles NERDTree
+map <C-n> :NERDTreeToggle<CR>
