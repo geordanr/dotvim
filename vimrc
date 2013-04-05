@@ -59,7 +59,6 @@ set statusline=%t%m%r%h%{SyntasticStatuslineFlag()}%=(%n:%c,%l/%L)%y%{fugitive#s
 set tabstop=8
 set tags=tags;/
 set tildeop
-set wildignore+=*/.git/*,*.pyc,*.pyo,*.o,*/build/*,*.deb,.*.swp,*.png,*.gif,*.so,*.pyd,*.dll,*.exe,*/test_paths/*,*/tmp/*,*/.sass-cache/*
 set wildmode=list:longest,full
 set wrapscan
 set writebackup
@@ -80,6 +79,10 @@ nnoremap <C-w>k <C-w>W
 command -nargs=? -complete=file E split <args>
 
 " ctrlp
+let g:ctrlp_custom_ignore = {
+            \'dir':  '\.git$\|build$\|test_paths$\|tmp$\|\.sass-cache$',
+            \'file': '\.pyc$\|\.pyo$\|\.o$\|\.deb$\|\.\.swp$\|\.png$\|\.gif$\|\.so$\|\.pyd$\|\.dll$\|\.exe$'
+            \}
 let g:ctrlp_prompt_mappings = {
             \    'PrtBS()':      ['<bs>', '<c-]>', '<c-h>'],
             \'PrtCurLeft()': ['<left>', '<c-^>'],
