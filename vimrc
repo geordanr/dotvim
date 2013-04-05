@@ -118,3 +118,6 @@ autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "Ctrl-N toggles NERDTree
 map <C-n> :NERDTreeToggle<CR>
+"Syntastic
+map <C-PageDown> :lne<CR>
+map <C-PageUp> :lp<CR>
