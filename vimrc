@@ -124,3 +124,13 @@ map <C-n> :NERDTreeToggle<CR>
 "Syntastic
 map <C-PageDown> :lne<CR>
 map <C-PageUp> :lp<CR>
+
+"I miss <C-v> as paste in Ubuntu
+" From http://vim.cybermirror.org/runtime/mswin.vim
+" CTRL-C is Copy
+vnoremap <C-C> "+y
+" CTRL-V is Paste
+map <C-V>		"+gP
+cmap <C-V>		<C-R>+
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
