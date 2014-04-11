@@ -15,7 +15,7 @@ let mapleader = "q"
 " syntax related settings
 syntax on
 syntax sync minlines=200
-set background=dark
+set background=dark hlsearch
 highlight clear NonText
 highlight clear Underlined
 highlight link  Underlined CursorLine
