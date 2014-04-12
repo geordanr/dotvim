@@ -134,3 +134,8 @@ map <C-V>		"+gP
 cmap <C-V>		<C-R>+
 exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
 exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+
+highlight DiffAdd    ctermbg=22 guibg=DarkGreen
+highlight DiffDelete ctermbg=52 ctermfg=fg guibg=firebrick4 guifg=fg
+highlight DiffChange ctermbg=58 guibg=gold4 guifg=fg
+"highlight DiffText   ctermbg=12 cterm=bold guibg=red gui=bold
