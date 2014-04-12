@@ -126,10 +126,11 @@ map <C-PageDown> :lne<CR>
 map <C-PageUp> :lp<CR>
 
 "I miss <C-v> as paste in Ubuntu
-" From http://vim.cybermirror.org/runtime/mswin.vim
-" CTRL-C is Copy
+"Which means visual has to move to C-Q from C-V
+" Modified from http://vim.cybermirror.org/runtime/mswin.vim
+" Ctrl-C is Copy
 vnoremap <C-C> "+y
-" CTRL-V is Paste
+" Ctrl-V is Paste
 map <C-V>		"+gP
 cmap <C-V>		<C-R>+
 exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
@@ -139,3 +140,6 @@ highlight DiffAdd    ctermbg=22 guibg=DarkGreen
 highlight DiffDelete ctermbg=52 ctermfg=fg guibg=firebrick4 guifg=fg
 highlight DiffChange ctermbg=58 guibg=gold4 guifg=fg
 "highlight DiffText   ctermbg=12 cterm=bold guibg=red gui=bold
+
+" Use CTRL-Q to do what CTRL-V used to do
+noremap <C-Q>		<C-V>
