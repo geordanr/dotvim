@@ -1,4 +1,5 @@
 " pathogen shenanigans
+set shell=/bin/bash
 call pathogen#infect()
 
 " set up some var defaults
