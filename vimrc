@@ -144,3 +144,11 @@ highlight DiffChange ctermbg=58 guibg=gold4 guifg=fg
 
 " Use CTRL-Q to do what CTRL-V used to do
 noremap <C-Q>		<C-V>
+
+" Disable opening browser after posting to your snippet to play.golang.org:
+let g:go_play_open_browser = 0
+" By default vim-go shows errors for the fmt command, to disable it:
+let g:go_fmt_fail_silently = 1
+" Disable auto fmt on save:
+let g:go_fmt_autosave = 0
+let g:go_disable_autoinstall = 1
