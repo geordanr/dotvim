@@ -80,10 +80,7 @@ nnoremap <C-w>k <C-w>W
 command -nargs=? -complete=file E split <args>
 
 " ctrlp
-let g:ctrlp_custom_ignore = {
-            \'dir':  '\.git$\|build$\|test_paths$\|tmp$\|\.sass-cache$',
-            \'file': '\.pyc$\|\.pyo$\|\.o$\|\.deb$\|\.\.swp$\|\.png$\|\.gif$\|\.so$\|\.pyd$\|\.dll$\|\.exe$'
-            \}
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 let g:ctrlp_prompt_mappings = {
             \    'PrtBS()':      ['<bs>', '<c-]>', '<c-h>'],
             \'PrtCurLeft()': ['<left>', '<c-^>'],
@@ -103,7 +100,7 @@ runtime macros/matchit.vim
 "Leader mappings
 "Fugitive stuff
 nnoremap <silent> <Leader>gb :Gblame<CR>
-nnoremap <silent> <Leader>gd :Gdiff<CR>
+nnoremap <silent> <Leader>gd :Gvdiff<CR>
 nnoremap <silent> <Leader>gr :Gread<CR>
 nnoremap <silent> <Leader>gw :Gwrite<CR>
 nnoremap <silent> <Leader>gf :Git fetch --all --prune<CR>
