@@ -8,6 +8,7 @@ let g:xml_use_xhtml=1          " put /> on singleton tags in HTML
 let g:sql_type_default='mysql' " default to MySQL style SQL syntax
 let g:php_sql_query=1          " assume strings in PHP are SQL
 let &guicursor = &guicursor . ",a:blinkon0" "stop blinking in gvim
+set guioptions-=T  "remove toolbar
 
 " I don't like q as macro
 map q <Nop>
