@@ -10,4 +10,4 @@ If `--recursive` didn't work:
 
 To update everything:
 
-    git submodule foreach git pull origin master
+    git submodule foreach git pull
